@@ -74,15 +74,16 @@ The Knowledge Graph App is a mobile application that transforms fragmented learn
 
 ### Requirement 6
 
-**User Story:** As a user, I want intuitive mobile interactions for manipulating knowledge graphs, so that I can efficiently work with complex information on small screens.
+**User Story:** As a user, I want intuitive mobile interactions with electron shell visualization, so that I can efficiently manipulate depth-based knowledge graphs on small screens.
 
 #### Acceptance Criteria
 
-1. WHEN the user interacts with the graph THEN the system SHALL provide touch-optimized controls for navigation and editing
-2. WHEN the user selects nodes THEN the system SHALL provide appropriate editing and connection options
-3. WHEN the user creates new nodes THEN the system SHALL offer intuitive placement and linking mechanisms
-4. WHEN the user navigates large graphs THEN the system SHALL provide smooth and responsive interaction patterns
-5. IF the user performs common actions THEN the system SHALL provide gesture shortcuts for efficiency
+1. WHEN the user taps a node THEN the system SHALL center and highlight the node with add child buttons appearing
+2. WHEN the user taps a selected node again THEN the system SHALL enter edit mode with topic/taxonomy/depth controls
+3. WHEN the user long-presses a node for 2 seconds THEN the system SHALL show circular progress and trigger AI suggestions
+4. WHEN nodes are displayed THEN the system SHALL constrain them to depth-based circular rings with taxonomy-based colors
+5. WHEN the user taps empty space THEN the system SHALL deselect the current node and unlock graph navigation
+6. IF the user changes node depth THEN the system SHALL animate the node to the appropriate depth ring
 
 *Note: Detailed interaction patterns specified in ui-design.md*
 
@@ -139,6 +140,18 @@ The Knowledge Graph App is a mobile application that transforms fragmented learn
 *Note: Specific performance targets and AI cost optimization detailed in performance.md*
 
 ### Requirement 11
+
+**User Story:** As a user with text content, I want to convert plain text into structured node trees using AI, so that I can quickly transform existing notes into knowledge graphs.
+
+#### Acceptance Criteria
+
+1. WHEN the user selects Smart Convert in Bolt Mode THEN the system SHALL provide a text input area for pasting content
+2. WHEN the user pastes text and requests conversion THEN the system SHALL use AI to break the text into a root node and connected child nodes
+3. WHEN the AI conversion completes THEN the system SHALL show a preview of the generated node tree before final acceptance
+4. WHEN the user reviews the preview THEN the system SHALL allow individual node acceptance/rejection and editing before import
+5. IF the user accepts the conversion THEN the system SHALL create the node tree in the current knowledge map
+
+### Requirement 12
 
 **User Story:** As a user concerned about data persistence, I want robust data management with backup and recovery capabilities, so that my knowledge graphs are protected against data loss.
 

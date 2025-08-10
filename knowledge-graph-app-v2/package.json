@@ -1,0 +1,29 @@
+{
+  "name": "knowledge-graph-app-v2",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@types/d3-force": "^3.0.10",
+    "d3-force": "^3.0.0",
+    "expo": "~53.0.20",
+    "expo-sqlite": "^15.2.14",
+    "expo-status-bar": "~2.2.3",
+    "react": "19.0.0",
+    "react-force-graph-2d": "^1.28.0",
+    "react-native": "0.79.5",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-svg": "15.11.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~19.0.10",
+    "typescript": "~5.8.3"
+  },
+  "private": true
+}
